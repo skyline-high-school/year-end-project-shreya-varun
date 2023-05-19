@@ -13,10 +13,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load(), 256, 256);
 
         stage.getIcons().add(new Image("file:assets/calculatrice.png"));
-        stage.setTitle("Calculator Game");
+        stage.setTitle("Calculator");
         stage.setScene(scene);
         stage.show();
     }
