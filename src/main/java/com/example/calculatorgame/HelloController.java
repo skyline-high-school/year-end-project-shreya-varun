@@ -9,7 +9,11 @@ public class HelloController {
     private Label welcomeText;
 
     @FXML
-    protected void onButtonClick() {
-        System.out.println("Hello World!");
+    protected void startGame() {
+
+    }
+
+    protected void openHelp() {
+
     }
 }
