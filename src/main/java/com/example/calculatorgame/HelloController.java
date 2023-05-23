@@ -12,7 +12,7 @@ public class HelloController {
     protected void startGame() {
 
     }
-
+    @FXML
     protected void openHelp() {
 
     }
