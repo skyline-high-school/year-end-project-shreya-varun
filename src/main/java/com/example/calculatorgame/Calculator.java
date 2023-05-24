@@ -10,6 +10,7 @@ import java.text.DecimalFormat;
 public class Calculator {
     @FXML
     Label calculator;
+    DecimalFormat decimalFormat = new DecimalFormat("#.##");
     String number1 = "";
     String operation = "";
     String number2 = "";
@@ -24,16 +25,36 @@ public class Calculator {
     @FXML
     private void setOperation(ActionEvent event) {
         String operation = ((Button)event.getSource()).getText();
-        if (!this.operation.isEmpty()) evaluateEquation();
+        if (!this.operation.isEmpty() && !number2.isEmpty()) evaluateEquation();
         this.operation = operation;
         updateDisplay();
     }
     @FXML
+    private void applyInstantFunction(ActionEvent event) {
+        String function = ((Button)event.getSource()).getText();
+        evaluateEquation();
+        double number = Double.parseDouble(this.number1);
+
+        switch (function) {
+            case "1/x":
+                number = 1 / number;
+                break;
+            case "+/-":
+                number *= -1;
+                break;
+        }
+
+        setFirstNumber(number);
+    }
+    @FXML
     private void evaluateEquation() {
+        if (number2.isEmpty()) {
+            operation = "";
+            return;
+        }
         double number = 0;
         double number1 = Double.parseDouble(this.number1);
         double number2 = Double.parseDouble(this.number2);
-        DecimalFormat decimalFormat = new DecimalFormat("#.###");
 
         switch (operation) {
             case "+":
@@ -50,10 +71,14 @@ public class Calculator {
                 break;
         }
 
+        setFirstNumber(number);
+        updateDisplay();
+    }
+    private void setFirstNumber(double number) {
+        number = Math.max(-1_000_000, Math.min(1_000_000, number));
         this.number1 = decimalFormat.format(number);
         operation = "";
         this.number2 = "";
-        updateDisplay();
     }
     private void updateDisplay() {
         calculator.setText(number1 + " " + operation + " " + number2);
