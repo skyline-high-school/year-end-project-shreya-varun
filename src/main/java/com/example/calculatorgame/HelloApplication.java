@@ -14,6 +14,8 @@ public class HelloApplication extends Application {
     public static Stage stage;
     public static Scene welcome;
     public static Scene game;
+
+    public static Scene help;
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
@@ -23,6 +25,11 @@ public class HelloApplication extends Application {
         FXMLLoader loader2 = new FXMLLoader(getClass().getResource("calculator.fxml"));
         Parent root2 = loader2.load();
         game = new Scene(root2, 256, 256);
+
+        FXMLLoader loader3 = new FXMLLoader(getClass().getResource("Page.fxml"));
+        Parent root3 = loader3.load();
+        help = new Scene(root3, 256, 256);
+
 
         stage.getIcons().add(new Image("file:assets/calculatrice.png"));
         stage.setTitle("Calculator");
