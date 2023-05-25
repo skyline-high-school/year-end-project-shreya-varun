@@ -15,7 +15,7 @@
       <Text layoutX="51.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click start to begin the game" />
       <Text layoutX="37.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press the buttons to input numbers into the calculator" textAlignment="CENTER" wrappingWidth="179.3515625" />
       <Text layoutX="37.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use arithmetic operations to combine the numbers together" textAlignment="CENTER" wrappingWidth="179.3515625" />
-      <Text layoutX="38.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The objective is to reach a number that is given by the computer" textAlignment="CENTER" wrappingWidth="179.3515625" />
-      <Button layoutX="101.0" layoutY="207.0" mnemonicParsing="false" onAction="#goBack" text="Go back" />
+      <Text layoutX="38.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to try and reach the number given, but you can only type numbers between 0~9 and 0.1~0.9!" textAlignment="CENTER" wrappingWidth="179.3515625" />
+      <Button layoutX="98.0" layoutY="217.0" mnemonicParsing="false" onAction="#goBack" text="Go back" />
    </children>
 </AnchorPane>

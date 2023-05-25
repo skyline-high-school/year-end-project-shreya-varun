@@ -5,7 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,7 +24,6 @@ public class HelloApplication extends Application {
         FXMLLoader loader2 = new FXMLLoader(getClass().getResource("calculator.fxml"));
         Parent root2 = loader2.load();
         game = new Scene(root2, 256, 256);
-
         FXMLLoader loader3 = new FXMLLoader(getClass().getResource("Page.fxml"));
         Parent root3 = loader3.load();
         help = new Scene(root3, 256, 256);
