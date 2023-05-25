@@ -16,4 +16,5 @@ public class HelloController {
     protected void openHelp() {
         HelloApplication.stage.setScene(HelloApplication.help);
     }
+
 }
