@@ -13,7 +13,5 @@ public class HelloController {
         HelloApplication.stage.setScene(HelloApplication.game);
     }
     @FXML
-    protected void openHelp() {
-        HelloApplication.stage.setScene(HelloApplication.help);
-    }
+    protected void openHelp() { HelloApplication.stage.setScene(HelloApplication.help); }
 }

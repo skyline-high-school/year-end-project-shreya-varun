@@ -47,38 +47,56 @@ public class Calculator {
         setFirstNumber(number);
     }
     @FXML
+    private void useSpecialFunction(ActionEvent event) {
+        String function = ((Button)event.getSource()).getText();
+        switch (function) {
+            case "C":
+                setFirstNumber(0);
+                break;
+            case "DEL":
+                if (number1.isEmpty()) break;
+                else if (operation.isEmpty()) number1 = number1.equals("0") ? "" : "0";
+                else if (number2.isEmpty()) operation = "";
+                else number2 = number2.equals("0") ? "" : "0";
+                updateDisplay();
+                break;
+        }
+    }
+    @FXML
     private void evaluateEquation() {
         if (number2.isEmpty()) {
             operation = "";
+            updateDisplay();
             return;
         }
-        double number = 0;
-        double number1 = Double.parseDouble(this.number1);
+        double number = Double.parseDouble(this.number1);
         double number2 = Double.parseDouble(this.number2);
 
         switch (operation) {
             case "+":
-                number = number1 + number2;
+                number += number2;
                 break;
             case "-":
-                number = number1 - number2;
+                number -= number2;
                 break;
             case "*":
-                number = number1 * number2;
+                number *= number2;
                 break;
             case "/":
-                number = number1 / number2;
+                number /= number2;
                 break;
         }
 
         setFirstNumber(number);
-        updateDisplay();
     }
     private void setFirstNumber(double number) {
-        number = Math.max(-1_000_000, Math.min(1_000_000, number));
+        if (Double.isNaN(number)) number = 0;
+        else number = Math.max(-1_000_000, Math.min(1_000_000, number));
+
         this.number1 = decimalFormat.format(number);
         operation = "";
         this.number2 = "";
+        updateDisplay();
     }
     private void updateDisplay() {
         calculator.setText(number1 + " " + operation + " " + number2);
