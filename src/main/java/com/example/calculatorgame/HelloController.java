@@ -14,4 +14,4 @@ public class HelloController {
     }
     @FXML
     protected void openHelp() { HelloApplication.stage.setScene(HelloApplication.help); }
-}
+}git chec
