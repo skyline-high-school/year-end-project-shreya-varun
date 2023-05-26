@@ -4,29 +4,30 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-
 import java.text.DecimalFormat;
 
 public class Calculator {
     @FXML
     Label calculator;
     DecimalFormat decimalFormat = new DecimalFormat("#.##");
-    String number1 = "";
+    String number1 = "0";
     String operation = "";
     String number2 = "";
     @FXML
     private void addNumber(ActionEvent event) {
         String number = ((Button)event.getSource()).getText();
 
-        if (number1.isEmpty() || operation.isEmpty()) number1 = number;
-        else number2 = number;
+        if (operation.isEmpty()) number1 = number1.equals("0.") ? "0." + number : number;
+        else number2 = number2.equals("0.") ? "0." + number : number;
         updateDisplay();
     }
     @FXML
     private void setOperation(ActionEvent event) {
         String operation = ((Button)event.getSource()).getText();
+
         if (!this.operation.isEmpty() && !number2.isEmpty()) evaluateEquation();
         this.operation = operation;
+        if (number1.equals("0.")) number1 = "0";
         updateDisplay();
     }
     @FXML
@@ -54,13 +55,18 @@ public class Calculator {
                 setFirstNumber(0);
                 break;
             case "DEL":
-                if (number1.isEmpty()) break;
-                else if (operation.isEmpty()) number1 = number1.equals("0") ? "" : "0";
+                if (operation.isEmpty()) number1 = number1.equals("0") ? "" : "0";
                 else if (number2.isEmpty()) operation = "";
                 else number2 = number2.equals("0") ? "" : "0";
                 updateDisplay();
                 break;
         }
+    }
+    @FXML
+    private void addDecimal() {
+        if (operation.isEmpty()) number1 = "0.";
+        else number2 = "0.";
+        updateDisplay();
     }
     @FXML
     private void evaluateEquation() {

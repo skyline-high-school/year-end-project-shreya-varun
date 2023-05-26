@@ -107,7 +107,7 @@
                      <Font name="System Bold" size="12.0" />
                   </font>
                </Button>
-               <Button alignment="CENTER" contentDisplay="CENTER" minHeight="25.0" minWidth="40.0" mnemonicParsing="false" style="-fx-background-color: #FFFFFF;" text="." GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <Button alignment="CENTER" contentDisplay="CENTER" minHeight="25.0" minWidth="40.0" mnemonicParsing="false" onAction="#addDecimal" style="-fx-background-color: #FFFFFF;" text="." GridPane.columnIndex="1" GridPane.rowIndex="4">
                   <font>
                      <Font name="System Bold" size="12.0" />
                   </font>
