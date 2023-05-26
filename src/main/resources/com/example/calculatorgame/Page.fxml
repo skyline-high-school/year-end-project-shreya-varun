@@ -9,7 +9,7 @@
    <children>
       <Text layoutX="38.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to play game" textAlignment="CENTER" wrappingWidth="179.3515625">
          <font>
-            <Font size="19.0" />
+            <Font name="Century Gothic" size="19.0" />
          </font>
       </Text>
       <Text layoutX="51.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click start to begin the game" />
