@@ -13,8 +13,8 @@ public class HelloApplication extends Application {
     public static Stage stage;
     public static Scene welcome;
     public static Scene game;
-
     public static Scene help;
+    public static Scene winner;
     @Override
     public void start(Stage stage) throws IOException {
         this.stage = stage;
@@ -27,6 +27,10 @@ public class HelloApplication extends Application {
         FXMLLoader loader3 = new FXMLLoader(getClass().getResource("Page.fxml"));
         Parent root3 = loader3.load();
         help = new Scene(root3, 256, 256);
+        //it gave me an error when doing the new loader
+//        FXMLLoader loader4 = new FXMLLoader(getClass().getResource("WinnerController.fxml"));
+//        Parent root4 = loader4.load();
+//        winner = new Scene(root4, 256, 256);
 
 
         stage.getIcons().add(new Image("file:assets/calculatrice.png"));
