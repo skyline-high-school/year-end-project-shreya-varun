@@ -4,10 +4,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.WinnerController">
+<AnchorPane prefHeight="256.0" prefWidth="256.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.WinnerController">
    <children>
-      <Text layoutX="274.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yayyy you won!" />
-      <Button layoutX="274.0" layoutY="318.0" mnemonicParsing="false" onAction="#startOver" text="Start Over" />
+      <Text layoutX="86.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yayyy you won!" />
+      <Button layoutX="93.0" layoutY="168.0" mnemonicParsing="false" onAction="#startOver" text="Start Over" />
    </children>
 </AnchorPane>

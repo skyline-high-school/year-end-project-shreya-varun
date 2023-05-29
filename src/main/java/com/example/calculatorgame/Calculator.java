@@ -1,6 +1,7 @@
 package com.example.calculatorgame;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.FillTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -8,10 +9,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.text.DecimalFormat;
+import java.util.Random;
 
 public class Calculator {
     @FXML
@@ -20,29 +24,76 @@ public class Calculator {
     GridPane buttonGrid;
     @FXML
     Label terminal;
+    @FXML
+    Label tally;
+    @FXML
+    Label target;
+    @FXML
+    ImageView checkbox;
 
     DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    Random random = new Random();
+    int round = 0;
+    final int lastRound = 10;
+
+    String targetNumber = "";
     String number1 = "0";
     String operation = "";
     String number2 = "";
     String memory = "0";
+    private void resetGame() {
+        splash.setOpacity(1);
+        splash.setText("3");
+        buttonGrid.setVisible(false);
+        targetNumber = "";
+        number1 = "0";
+        operation = "";
+        number2 = "";
+        round = 0;
+        target.setText("Target:");
+        terminal.setText("");
+    }
     public void startGame() {
+        resetGame();
         Timeline timeline = new Timeline(
             new KeyFrame(Duration.seconds(0.8), event -> splash.setText("2")),
             new KeyFrame(Duration.seconds(1.6), event -> splash.setText("1")),
             new KeyFrame(Duration.seconds(2.4), event -> {
                 splash.setText("GO!");
                 FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5), splash);
-                fadeTransition.setFromValue(1.0);
-                fadeTransition.setToValue(0.0);
+                fadeTransition.setFromValue(1);
+                fadeTransition.setToValue(0);
                 fadeTransition.play();
                 buttonGrid.setVisible(true);
+                newRound();
             })
         );
         timeline.play();
     }
+    public void newRound() {
+        round++;
+        if (round > lastRound) {
+            endGame();
+            return;
+        }
+        tally.setText(round + "/" + lastRound);
+
+        // Rounds 1-3 up to 100, 4-6 up to 1000, 7-9 up to 10000, 10 is up to 100 with a decimal
+        double potentialTarget;
+        if (round <= 3) potentialTarget = random.nextInt(100) + 1;
+        else if (round <= 6) potentialTarget = random.nextInt(1000) + 1;
+        else potentialTarget = random.nextInt(10000) + 1;
+        // 1/5 chance to make the number negative
+        potentialTarget *= random.nextInt(5) == 0 ? -1 : 1;
+
+        targetNumber = decimalFormat.format(potentialTarget);
+        target.setText("Target: " + targetNumber);
+    }
+    public void endGame() {
+        HelloApplication.stage.setScene(HelloApplication.winner);
+    }
     @FXML
-    private void addNumber(ActionEvent event) { addNumber(((Button)event.getSource()).getText()); }
+    private void addNumber(ActionEvent event) { addNumber(((Button) event.getSource()).getText()); }
     private void addNumber(String number) {
         if (operation.isEmpty()) number1 = number1.equals("0.") ? "0." + number : number;
         else number2 = number2.equals("0.") ? "0." + number : number;
@@ -116,6 +167,16 @@ public class Calculator {
         updateDisplay();
     }
     @FXML
+    private void runTargetCheck() {
+        evaluateEquation();
+        if (!number1.equals(targetNumber)) return;
+
+        newRound();
+        FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5), checkbox);
+        fadeTransition.setFromValue(1);
+        fadeTransition.setToValue(0);
+        fadeTransition.play();
+    }
     private void evaluateEquation() {
         if (number2.isEmpty()) {
             operation = "";
