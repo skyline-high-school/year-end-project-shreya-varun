@@ -82,7 +82,8 @@ public class Calculator {
         double potentialTarget;
         if (round <= 3) potentialTarget = random.nextInt(100) + 1;
         else if (round <= 6) potentialTarget = random.nextInt(1000) + 1;
-        else potentialTarget = random.nextInt(10000) + 1;
+        else if (round <= 9) potentialTarget = random.nextInt(10000) + 1;
+        else potentialTarget = random.nextDouble(100) + 1;
         // 1/5 chance to make the number negative
         potentialTarget *= random.nextInt(5) == 0 ? -1 : 1;
 
