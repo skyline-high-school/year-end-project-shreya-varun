@@ -13,30 +13,27 @@ public class HelloApplication extends Application {
     public static Stage stage;
     public static Scene welcome;
     public static Scene game;
+    public static Calculator gameController;
     public static Scene help;
     public static Scene winner;
     @Override
     public void start(Stage stage) throws IOException {
-        this.stage = stage;
-        FXMLLoader loader1 = new FXMLLoader(getClass().getResource("hello-view.fxml"));
-        Parent root1 = loader1.load();
-        welcome = new Scene(root1, 256, 256);
-        FXMLLoader loader2 = new FXMLLoader(getClass().getResource("calculator.fxml"));
-        Parent root2 = loader2.load();
-        game = new Scene(root2, 256, 256);
-        FXMLLoader loader3 = new FXMLLoader(getClass().getResource("Page.fxml"));
-        Parent root3 = loader3.load();
-        help = new Scene(root3, 256, 256);
-        //it gave me an error when doing the new loader
-//        FXMLLoader loader4 = new FXMLLoader(getClass().getResource("WinnerController.fxml"));
-//        Parent root4 = loader4.load();
-//        winner = new Scene(root4, 256, 256);
-
+        HelloApplication.stage = stage;
+        welcome = loadFXML("hello-view.fxml");
+        game = loadFXML("calculator.fxml");
+        help = loadFXML("Page.fxml");
+        winner = loadFXML("winner-page.fxml");
 
         stage.getIcons().add(new Image("file:assets/calculatrice.png"));
         stage.setTitle("Calculator");
         stage.setScene(welcome);
         stage.show();
+    }
+    public Scene loadFXML(String path) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+        Parent root = loader.load();
+        if (path.equals("calculator.fxml")) gameController = loader.getController();
+        return new Scene(root, 256, 256);
     }
     public static void main(String[] args) {
         launch();

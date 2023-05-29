@@ -1,8 +1,11 @@
 package com.example.calculatorgame;
 
+import javafx.fxml.FXML;
+
 public class WinnerController {
-//    public void startOver() {
-//        HelloApplication.stage.setScene(HelloApplication.welcome);
-//    }
+    @FXML
+    public void startOver() {
+        HelloApplication.stage.setScene(HelloApplication.welcome);
+    }
 }
 
