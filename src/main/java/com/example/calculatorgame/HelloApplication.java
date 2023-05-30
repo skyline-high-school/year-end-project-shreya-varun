@@ -24,6 +24,7 @@ public class HelloApplication extends Application {
         help = loadFXML("Page.fxml");
         winner = loadFXML("winner-page.fxml");
 
+        stage.setResizable(false);
         stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("calculatrice.png")));
         stage.setTitle("Calculator");
         stage.setScene(welcome);
@@ -33,7 +34,7 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root = loader.load();
         if (path.equals("calculator.fxml")) gameController = loader.getController();
-        return new Scene(root, 256, 256);
+        return new Scene(root, 512, 512);
     }
     public static void main(String[] args) {
         launch();
