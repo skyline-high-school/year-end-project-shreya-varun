@@ -41,6 +41,8 @@ public class Calculator {
     String operation = "";
     String number2 = "";
     String memory = "0";
+    @FXML
+    private void goBack() { HelloApplication.stage.setScene(HelloApplication.welcome); }
     private void resetGame() {
         splash.setOpacity(1);
         splash.setText("3");
@@ -55,15 +57,16 @@ public class Calculator {
     }
     public void startGame() {
         resetGame();
+        FadeTransition splashFade = new FadeTransition(Duration.seconds(0.5), splash);
+        splashFade.setFromValue(1);
+        splashFade.setToValue(0);
+
         Timeline timeline = new Timeline(
             new KeyFrame(Duration.seconds(0.8), event -> splash.setText("2")),
             new KeyFrame(Duration.seconds(1.6), event -> splash.setText("1")),
             new KeyFrame(Duration.seconds(2.4), event -> {
                 splash.setText("GO!");
-                FadeTransition fadeTransition = new FadeTransition(Duration.seconds(0.5), splash);
-                fadeTransition.setFromValue(1);
-                fadeTransition.setToValue(0);
-                fadeTransition.play();
+                splashFade.play();
                 buttonGrid.setVisible(true);
                 newRound();
             })

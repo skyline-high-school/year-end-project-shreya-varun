@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
         help = loadFXML("Page.fxml");
         winner = loadFXML("winner-page.fxml");
 
-        stage.getIcons().add(new Image("file:assets/calculatrice.png"));
+        stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("calculatrice.png")));
         stage.setTitle("Calculator");
         stage.setScene(welcome);
         stage.show();
