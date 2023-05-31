@@ -1,17 +1,15 @@
 package com.example.calculatorgame;
 
+import javafx.animation.AnimationTimer;
 import javafx.animation.FadeTransition;
-import javafx.animation.FillTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.text.DecimalFormat;
@@ -30,10 +28,20 @@ public class Calculator {
     Label target;
     @FXML
     ImageView checkbox;
+    @FXML
+    Label timerLabel;
 
-    DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    AnimationTimer timer = new AnimationTimer() {
+        @Override
+        public void handle(long now) {
+            double elapsed = (now - startTime) / 1_000_000_000.0;
+            timerLabel.setText(String.format("%.2fs", Math.max(elapsed, 0)));
+        }
+    };
+    public static DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    long startTime;
     Random random = new Random();
-    int round = 0;
+    int round;
     final int lastRound = 10;
 
     String targetNumber = "";
@@ -51,9 +59,12 @@ public class Calculator {
         number1 = "0";
         operation = "";
         number2 = "";
-        round = 0;
+        round = 9;
         target.setText("Target:");
+        tally.setText("");
         terminal.setText("");
+        timer.stop();
+        timerLabel.setText("");
     }
     public void startGame() {
         resetGame();
@@ -69,6 +80,8 @@ public class Calculator {
                 splashFade.play();
                 buttonGrid.setVisible(true);
                 newRound();
+                startTime = System.nanoTime();
+                timer.start();
             })
         );
         timeline.play();
@@ -94,6 +107,8 @@ public class Calculator {
         target.setText("Target: " + targetNumber);
     }
     public void endGame() {
+        double finalTime = (System.nanoTime() - startTime) / 1_000_000_000.0;
+        HelloApplication.winnerController.setFinalTime(finalTime);
         HelloApplication.stage.setScene(HelloApplication.winner);
     }
     @FXML

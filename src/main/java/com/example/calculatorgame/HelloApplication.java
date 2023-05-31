@@ -16,6 +16,7 @@ public class HelloApplication extends Application {
     public static Calculator gameController;
     public static Scene help;
     public static Scene winner;
+    public static WinnerController winnerController;
     @Override
     public void start(Stage stage) throws IOException {
         HelloApplication.stage = stage;
@@ -34,6 +35,7 @@ public class HelloApplication extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root = loader.load();
         if (path.equals("calculator.fxml")) gameController = loader.getController();
+        if (path.equals("winner-page.fxml")) winnerController = loader.getController();
         return new Scene(root, 512, 512);
     }
     public static void main(String[] args) {

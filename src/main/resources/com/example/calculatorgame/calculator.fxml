@@ -37,152 +37,152 @@
             <children>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="7" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="2" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="1" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="5" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="4" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="8" textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="6" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="9" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="3" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addNumber" style="-fx-background-color: #FFFFFF;" text="0" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setOperation" style="-fx-background-color: #4D4DFF;" text="/" textOverrun="CLIP" GridPane.columnIndex="5">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setOperation" style="-fx-background-color: #4D4DFF;" text="*" textOverrun="CLIP" GridPane.columnIndex="5" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setOperation" style="-fx-background-color: #4D4DFF;" text="-" textOverrun="CLIP" GridPane.columnIndex="5" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#setOperation" style="-fx-background-color: #4D4DFF;" text="+" textOverrun="CLIP" GridPane.columnIndex="5" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#runTargetCheck" style="-fx-background-color: #00FF00;" text="=" GridPane.columnIndex="5" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#useSpecialFunction" style="-fx-background-color: #FF4D4D;" text="C" textOverrun="CLIP" GridPane.columnIndex="2">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="1/x" textOverrun="CLIP" GridPane.columnIndex="3">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="+/-" textOverrun="CLIP" GridPane.columnIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#addDecimal" style="-fx-background-color: #FFFFFF;" text="." textOverrun="CLIP" GridPane.columnIndex="3" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#useSpecialFunction" style="-fx-background-color: #FFFFFF;" text="DEL" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="11.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="round" textOverrun="CLIP">
                   <font>
-                     <Font name="System Bold" size="8.0" />
+                     <Font name="System Bold" size="12.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#useSpecialFunction" style="-fx-background-color: #FF4D4D;" text="AC" textOverrun="CLIP" GridPane.columnIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="x^2" textOverrun="CLIP" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="11.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="2^x" textOverrun="CLIP" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="11.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="sqrtx" textOverrun="CLIP" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="9.0" />
+                     <Font name="System Bold" size="13.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#runTargetCheck" style="-fx-background-color: #00FF00;" text="=" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#executeMemory" prefWidth="79.0" style="-fx-background-color: #D4D4D4;" text="MC" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#executeMemory" style="-fx-background-color: #D4D4D4;" text="MR" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="11.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#executeMemory" style="-fx-background-color: #D4D4D4;" text="M+" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="3">
                   <font>
-                     <Font name="System Bold" size="11.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#executeMemory" style="-fx-background-color: #D4D4D4;" text="M-" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="16.0" />
                   </font>
                </Button>
             </children>
@@ -217,6 +217,11 @@
                <Font size="20.0" />
             </font>
          </Button>
+         <Label fx:id="timerLabel" alignment="CENTER" layoutX="357.0" layoutY="373.0" prefHeight="40.0" prefWidth="76.0" textAlignment="CENTER">
+            <font>
+               <Font size="17.0" />
+            </font>
+         </Label>
       </children>
    </AnchorPane>
 </VBox>
