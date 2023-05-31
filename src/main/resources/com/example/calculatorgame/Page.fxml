@@ -7,28 +7,28 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.PageController">
    <children>
-      <Text layoutX="51.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to play game" textAlignment="CENTER" wrappingWidth="410.3218196841791">
+      <Text layoutX="51.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How To Play Game" textAlignment="CENTER" wrappingWidth="410.3218196841791">
          <font>
-            <Font name="Century Gothic" size="37.0" />
+            <Font size="37.0" />
          </font>
       </Text>
-      <Text layoutX="56.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click start to begin the game">
+      <Text layoutX="154.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Click start to begin the game">
          <font>
             <Font size="16.0" />
          </font></Text>
-      <Text layoutX="281.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press the buttons to input numbers into the calculator" textAlignment="CENTER" wrappingWidth="179.3515625">
+      <Text layoutX="166.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press the buttons to input numbers into the calculator" textAlignment="CENTER" wrappingWidth="179.3515625">
          <font>
             <Font size="16.0" />
          </font></Text>
-      <Text layoutX="68.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use arithmetic operations to combine the numbers together" textAlignment="CENTER" wrappingWidth="179.3515625">
+      <Text layoutX="166.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use arithmetic operations to combine the numbers together" textAlignment="CENTER" wrappingWidth="179.3515625">
          <font>
             <Font size="16.0" />
          </font></Text>
-      <Text layoutX="281.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to try and reach the number given, but you can only type numbers between 0~9 and 0.1~0.9!" textAlignment="CENTER" wrappingWidth="179.3515625">
+      <Text layoutX="166.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You have to try and reach the number given, but you can only type numbers between 0~9 and 0.1~0.9!" textAlignment="CENTER" wrappingWidth="179.3515625">
          <font>
             <Font size="16.0" />
          </font></Text>
-      <Button layoutX="201.0" layoutY="409.0" mnemonicParsing="false" onAction="#goBack" prefHeight="67.0" prefWidth="110.0" text="Back">
+      <Button layoutX="201.0" layoutY="431.0" mnemonicParsing="false" onAction="#goBack" prefHeight="67.0" prefWidth="110.0" text="Back">
          <font>
             <Font size="20.0" />
          </font></Button>
