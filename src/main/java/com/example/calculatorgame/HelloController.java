@@ -9,8 +9,8 @@ public class HelloController {
 
     @FXML
     protected void startGame() {
-        HelloApplication.gameController.startGame();
-        HelloApplication.stage.setScene(HelloApplication.game);
+        //HelloApplication.gameController.startGame();
+        HelloApplication.stage.setScene(HelloApplication.winner);
     }
     @FXML
     protected void openHelp() { HelloApplication.stage.setScene(HelloApplication.help); }
