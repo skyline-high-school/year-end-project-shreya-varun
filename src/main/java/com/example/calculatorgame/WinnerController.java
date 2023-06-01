@@ -5,6 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class WinnerController {
     @FXML
     Label finalTimeLabel;
@@ -14,6 +20,13 @@ public class WinnerController {
     Button submitButton;
     @FXML
     TextField username;
+
+    File leaderboard;
+    Scanner scanner;
+    public WinnerController() throws IOException {
+        leaderboard = new File("src/main/resources/com/example/calculatorgame/leaderboard.txt");
+        scanner = new Scanner(leaderboard);
+    }
     @FXML
     public void startOver() {
         HelloApplication.stage.setScene(HelloApplication.welcome);
@@ -34,10 +47,13 @@ public class WinnerController {
         this.resultMessage.setText(resultMessage);
     }
     @FXML
-    private void submitScore() {
+    private void submitScore() throws IOException {
         String username = this.username.getText();
 
         submitButton.setDisable(true);
+        FileWriter fwrite = new FileWriter(leaderboard);
+        fwrite.write("hi");
+        fwrite.close();
     }
 }
 

@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17e10b07-37e1-431f-80cd-3c8024b56e82" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculatorgame/leaderboard.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/WinnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/calculatorgame/WinnerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculatorgame/calculator.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculatorgame/calculator.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/calculatorgame/winner-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/calculatorgame/winner-page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
