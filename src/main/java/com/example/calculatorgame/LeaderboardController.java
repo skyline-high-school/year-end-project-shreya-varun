@@ -7,8 +7,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-import java.util.ArrayList;
-
 public class LeaderboardController {
     @FXML
     Button previousButton;
