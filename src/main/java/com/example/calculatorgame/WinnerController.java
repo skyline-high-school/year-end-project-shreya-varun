@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class WinnerController {
     @FXML
     Label finalTimeLabel;
@@ -14,11 +16,13 @@ public class WinnerController {
     Button submitButton;
     @FXML
     TextField username;
+    double finalTime;
     @FXML
     public void startOver() {
         HelloApplication.stage.setScene(HelloApplication.welcome);
     }
     public void setFinalTime(double finalTime) {
+        this.finalTime = finalTime;
         submitButton.setDisable(false);
         finalTimeLabel.setText(Calculator.decimalFormat.format(finalTime) + "s");
         String resultMessage;
@@ -34,10 +38,10 @@ public class WinnerController {
         this.resultMessage.setText(resultMessage);
     }
     @FXML
-    private void submitScore() {
+    private void submitScore() throws IOException {
         String username = this.username.getText();
-
         submitButton.setDisable(true);
+        Leaderboard.submitScore(username, finalTime);
     }
 }
 

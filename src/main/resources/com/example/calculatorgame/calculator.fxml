@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="512.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.Calculator">
+<VBox alignment="CENTER" prefHeight="512.0" prefWidth="512.0" spacing="20.0" xmlns="http://javafx.com/javafx/20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.Calculator">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -132,12 +132,12 @@
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#useSpecialFunction" style="-fx-background-color: #FFFFFF;" text="DEL" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.rowIndex="4">
                   <font>
-                     <Font name="System Bold" size="16.0" />
+                     <Font name="System Bold" size="15.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="round" textOverrun="CLIP">
                   <font>
-                     <Font name="System Bold" size="12.0" />
+                     <Font name="System Bold" size="11.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#useSpecialFunction" style="-fx-background-color: #FF4D4D;" text="AC" textOverrun="CLIP" GridPane.columnIndex="1">
@@ -147,12 +147,12 @@
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="x^2" textOverrun="CLIP" GridPane.rowIndex="1">
                   <font>
-                     <Font name="System Bold" size="16.0" />
+                     <Font name="System Bold" size="15.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="2^x" textOverrun="CLIP" GridPane.rowIndex="2">
                   <font>
-                     <Font name="System Bold" size="16.0" />
+                     <Font name="System Bold" size="15.0" />
                   </font>
                </Button>
                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="40.0" minWidth="50.0" mnemonicParsing="false" onAction="#applyInstantFunction" style="-fx-background-color: #00E6E6;" text="sqrtx" textOverrun="CLIP" GridPane.rowIndex="3">
@@ -207,11 +207,6 @@
                <Image url="@checkbox.png" />
             </image>
          </ImageView>
-         <Label fx:id="splash" alignment="CENTER" mouseTransparent="true" prefHeight="399.0" prefWidth="472.0" text="3" textAlignment="CENTER">
-            <font>
-               <Font name="System Bold" size="128.0" />
-            </font>
-         </Label>
          <Button layoutY="359.0" mnemonicParsing="false" onAction="#goBack" prefHeight="67.0" prefWidth="110.0" text="Back">
             <font>
                <Font size="20.0" />
@@ -220,6 +215,11 @@
          <Label fx:id="timerLabel" alignment="CENTER" layoutX="357.0" layoutY="373.0" prefHeight="40.0" prefWidth="76.0" textAlignment="CENTER">
             <font>
                <Font size="17.0" />
+            </font>
+         </Label>
+         <Label fx:id="splash" alignment="CENTER" layoutY="13.0" mouseTransparent="true" prefHeight="399.0" prefWidth="472.0" text="3" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="128.0" />
             </font>
          </Label>
       </children>
