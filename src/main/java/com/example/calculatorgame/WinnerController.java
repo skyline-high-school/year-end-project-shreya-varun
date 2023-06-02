@@ -5,11 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 
 public class WinnerController {
     @FXML
@@ -20,18 +19,23 @@ public class WinnerController {
     Button submitButton;
     @FXML
     TextField username;
-
-    File leaderboard;
-    Scanner scanner;
+    Map<String, Double> records = new HashMap<>();
+    BufferedWriter leaderboardWriter;
+    double finalTime;
     public WinnerController() throws IOException {
-        leaderboard = new File("src/main/resources/com/example/calculatorgame/leaderboard.txt");
-        scanner = new Scanner(leaderboard);
+        String path = "src/main/resources/com/example/calculatorgame/leaderboard.txt";
+        List<String> rawRecords = Files.readAllLines(Paths.get(path));
+        for (int i=0;i<rawRecords.size();i+=2) {
+            records.put(rawRecords.get(i), Double.parseDouble(rawRecords.get(i+1)));
+        }
+        leaderboardWriter = new BufferedWriter(new FileWriter(path, true));
     }
     @FXML
     public void startOver() {
         HelloApplication.stage.setScene(HelloApplication.welcome);
     }
     public void setFinalTime(double finalTime) {
+        this.finalTime = finalTime;
         submitButton.setDisable(false);
         finalTimeLabel.setText(Calculator.decimalFormat.format(finalTime) + "s");
         String resultMessage;
@@ -51,9 +55,12 @@ public class WinnerController {
         String username = this.username.getText();
 
         submitButton.setDisable(true);
-        FileWriter fwrite = new FileWriter(leaderboard);
-        fwrite.write("hi");
-        fwrite.close();
+        leaderboardWriter.newLine();
+        leaderboardWriter.write(username);
+        leaderboardWriter.newLine();
+        leaderboardWriter.write(Calculator.decimalFormat.format(finalTime));
+        leaderboardWriter.flush();
+        records.put(username, finalTime);
     }
 }
 

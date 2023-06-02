@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -17,17 +19,17 @@
          <font>
             <Font size="19.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="130.0" layoutY="116.0" prefHeight="53.0" prefWidth="153.0" text="Your Time:">
+      <Label alignment="CENTER" layoutX="102.0" layoutY="89.0" prefHeight="53.0" prefWidth="153.0" text="Your Time:">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="finalTimeLabel" alignment="CENTER" layoutX="284.0" layoutY="116.0" prefHeight="53.0" prefWidth="140.0" text="0.00s">
+      <Label fx:id="finalTimeLabel" alignment="CENTER" layoutX="256.0" layoutY="89.0" prefHeight="53.0" prefWidth="140.0" text="0.00s">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="resultMessage" alignment="CENTER" layoutX="31.0" layoutY="288.0" prefHeight="46.0" prefWidth="450.0" text="Blazingly fast! Just like the Java programming language!">
+      <Label fx:id="resultMessage" alignment="CENTER" layoutX="31.0" layoutY="350.0" prefHeight="46.0" prefWidth="450.0" text="Blazingly fast! Just like the Java programming language!">
          <font>
             <Font size="15.0" />
          </font>
@@ -43,5 +45,10 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="195.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BART.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
