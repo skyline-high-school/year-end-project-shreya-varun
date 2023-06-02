@@ -59,7 +59,7 @@ public class Calculator {
         number1 = "0";
         operation = "";
         number2 = "";
-        round = 9;
+        round = 0;
         target.setText("Target:");
         tally.setText("");
         terminal.setText("");

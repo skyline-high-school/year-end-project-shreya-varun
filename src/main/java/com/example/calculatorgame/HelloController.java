@@ -9,10 +9,14 @@ public class HelloController {
 
     @FXML
     protected void startGame() {
-        HelloApplication.stage.setScene(HelloApplication.winner);
-        // HelloApplication.gameController.startGame();
-        // HelloApplication.stage.setScene(HelloApplication.game);
+        HelloApplication.gameController.startGame();
+        HelloApplication.stage.setScene(HelloApplication.game);
     }
     @FXML
     protected void openHelp() { HelloApplication.stage.setScene(HelloApplication.help); }
+    @FXML
+    protected void showLeaderboards() {
+        HelloApplication.leaderboardController.resetLeaderboards();
+        HelloApplication.stage.setScene(HelloApplication.leaderboards);
+    }
 }

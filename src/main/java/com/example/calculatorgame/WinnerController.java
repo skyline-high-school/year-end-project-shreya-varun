@@ -19,17 +19,7 @@ public class WinnerController {
     Button submitButton;
     @FXML
     TextField username;
-    Map<String, Double> records = new HashMap<>();
-    BufferedWriter leaderboardWriter;
     double finalTime;
-    public WinnerController() throws IOException {
-        String path = "src/main/resources/com/example/calculatorgame/leaderboard.txt";
-        List<String> rawRecords = Files.readAllLines(Paths.get(path));
-        for (int i=0;i<rawRecords.size();i+=2) {
-            records.put(rawRecords.get(i), Double.parseDouble(rawRecords.get(i+1)));
-        }
-        leaderboardWriter = new BufferedWriter(new FileWriter(path, true));
-    }
     @FXML
     public void startOver() {
         HelloApplication.stage.setScene(HelloApplication.welcome);
@@ -53,14 +43,8 @@ public class WinnerController {
     @FXML
     private void submitScore() throws IOException {
         String username = this.username.getText();
-
         submitButton.setDisable(true);
-        leaderboardWriter.newLine();
-        leaderboardWriter.write(username);
-        leaderboardWriter.newLine();
-        leaderboardWriter.write(Calculator.decimalFormat.format(finalTime));
-        leaderboardWriter.flush();
-        records.put(username, finalTime);
+        Leaderboard.submitScore(username, finalTime);
     }
 }
 
