@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.util.Duration;
 
 import java.text.DecimalFormat;
@@ -43,15 +44,33 @@ public class Calculator {
     Random random = new Random();
     int round;
     final int lastRound = 10;
+    boolean playingGame;
 
     String targetNumber = "";
     String number1 = "0";
     String operation = "";
     String number2 = "";
     String memory = "0";
+
+    public void addKeyListeners() {
+        HelloApplication.game.setOnKeyPressed(keyEvent -> {
+            if (!playingGame) return;
+            switch (keyEvent.getCode()) {
+                case EQUALS -> {
+                    if (keyEvent.isShiftDown()) setOperation("+");
+                    else evaluateEquation();
+                }
+                case MINUS -> { if (!keyEvent.isShiftDown()) setOperation("-"); }
+                case ASTERISK -> { if (!keyEvent.isShiftDown()) setOperation("*"); }
+                case SLASH -> setOperation("/");
+            }
+            if (keyEvent.getCode().isDigitKey()) addNumber(keyEvent.getText());
+        });
+    }
     @FXML
     private void goBack() { HelloApplication.stage.setScene(HelloApplication.welcome); }
     private void resetGame() {
+        playingGame = false;
         splash.setOpacity(1);
         splash.setText("3");
         buttonGrid.setVisible(false);
@@ -82,6 +101,7 @@ public class Calculator {
                 newRound();
                 startTime = System.nanoTime();
                 timer.start();
+                playingGame = true;
             })
         );
         timeline.play();
@@ -119,9 +139,8 @@ public class Calculator {
         updateDisplay();
     }
     @FXML
-    private void setOperation(ActionEvent event) {
-        String operation = ((Button)event.getSource()).getText();
-
+    private void setOperation(ActionEvent event) { setOperation(((Button)event.getSource()).getText()); }
+    private void setOperation(String operation) {
         if (!this.operation.isEmpty() && !number2.isEmpty()) evaluateEquation();
         this.operation = operation;
         if (number1.equals("0.")) number1 = "0";

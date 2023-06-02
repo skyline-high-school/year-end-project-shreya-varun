@@ -26,6 +26,7 @@ public class HelloApplication extends Application {
         Leaderboard.initialize();
         welcome = loadFXML("hello-view.fxml");
         game = loadFXML("calculator.fxml");
+        gameController.addKeyListeners();
         help = loadFXML("Page.fxml");
         winner = loadFXML("winner-page.fxml");
         leaderboards = loadFXML("leaderboard.fxml");
