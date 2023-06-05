@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="512.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/20.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.WinnerController">
+<AnchorPane prefHeight="512.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorgame.WinnerController">
    <children>
       <Text layoutX="119.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Yayyy you won!">
          <font>
@@ -45,9 +45,9 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="195.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="191.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@BART.jpg" />
+            <Image url="@BART.gif" />
          </image>
       </ImageView>
    </children>
